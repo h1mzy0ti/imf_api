@@ -1,1 +1,1 @@
-web: gunicorn imf_api.wsgi
+web: gunicorn imf_api.wsgi:application
