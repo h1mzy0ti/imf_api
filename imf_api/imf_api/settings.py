@@ -32,6 +32,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 
 ALLOWED_HOSTS = ['.onrender.com']
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
 ]
 # Configuration
 ADDED_APPS = [
+    'corsheaders',
     'rest_framework',
     'rest_framework_simplejwt',
     'gadgets',
@@ -81,6 +83,7 @@ SIMPLE_JWT = {
 }
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
