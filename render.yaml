@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: imf-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn imf_api.wsgi:application
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        generateValue: true
+      - fromGroup: imf-api-env
