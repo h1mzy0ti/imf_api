@@ -5,11 +5,16 @@ from rest_framework.response import Response
 from rest_framework import status, permissions
 from .serializers import RegisterSerializer
 from django.contrib.auth.models import User
+import logging
 
+
+logger = logging.getLogger(__name__) 
 
 class RegisterView(APIView):
-    def get(self, request):
-        return Response({"message": "You made a GET request, not POST"}, status=405)
+    def dispatch(self, request, *args, **kwargs):
+        logger.info(f"DISPATCHED METHOD: {request.method}")
+        return super().dispatch(request, *args, **kwargs)
+
 
     authentication_classes = []  
     permission_classes = []  
@@ -29,7 +34,7 @@ class RegisterView(APIView):
         
         # If the data is not valid, return errors
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
+    
 class LoginView(TokenObtainPairView):
     pass
 
