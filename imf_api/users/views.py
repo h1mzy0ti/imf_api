@@ -13,10 +13,6 @@ class RegisterView(APIView):
     authentication_classes = []
     permission_classes = []
 
-    def dispatch(self, request, *args, **kwargs):
-        logger.info(f"DISPATCHED METHOD: {request.method}")
-        return super().dispatch(request, *args, **kwargs)
-
     def post(self, request):
         logger.info(f"POST Request Data: {request.data}")  # Log the request data
         serializer = RegisterSerializer(data=request.data)
