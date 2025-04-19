@@ -8,6 +8,9 @@ from django.contrib.auth.models import User
 
 
 class RegisterView(APIView):
+    def get(self, request):
+        return Response({"message": "You made a GET request, not POST"}, status=405)
+
     authentication_classes = []  
     permission_classes = []  
     def post(self, request):
