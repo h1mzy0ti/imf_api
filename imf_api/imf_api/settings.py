@@ -71,7 +71,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ["PGDATABASE"],
         'USER': os.environ["postgresu"],
-        'PASSWORD': os.environ["root"],
+        'PASSWORD': os.environ["PGPASSWORD"],
         'HOST': os.environ["PGHOST"],
         'PORT': os.environ["PGPORT"],
     }
