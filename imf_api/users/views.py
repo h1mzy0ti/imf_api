@@ -7,20 +7,21 @@ from .serializers import RegisterSerializer
 from django.contrib.auth.models import User
 import logging
 
-
 logger = logging.getLogger(__name__) 
 
 class RegisterView(APIView):
+    authentication_classes = []
+    permission_classes = []
+
     def dispatch(self, request, *args, **kwargs):
         logger.info(f"DISPATCHED METHOD: {request.method}")
         return super().dispatch(request, *args, **kwargs)
 
-
-    authentication_classes = []  
-    permission_classes = []  
     def post(self, request):
+        logger.info(f"POST Request Data: {request.data}")  # Log the request data
         serializer = RegisterSerializer(data=request.data)
         if serializer.is_valid():
+            logger.info(f"Serializer is valid: {serializer.validated_data}")
             user = serializer.save()
 
             refresh = RefreshToken.for_user(user)
@@ -31,9 +32,10 @@ class RegisterView(APIView):
                 "access_token": access_token,
                 "refresh_token": str(refresh)
             }, status=status.HTTP_201_CREATED)
-        
-        # If the data is not valid, return errors
+
+        logger.error(f"Serializer errors: {serializer.errors}")  # Log errors if serializer is invalid
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     
 class LoginView(TokenObtainPairView):
     pass
