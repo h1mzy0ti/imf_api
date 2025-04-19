@@ -5,7 +5,9 @@ services:
     buildCommand: |
       pip install -r requirements.txt
       python manage.py collectstatic --noinput
-    startCommand: gunicorn imf_api.wsgi:application --chdir imf_api
+    startCommand: |
+      python manage.py migrate && \
+      gunicorn imf_api.wsgi:application --chdir imf_api
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: imf_api.settings
