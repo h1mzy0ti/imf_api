@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 class RegisterView(APIView):
     authentication_classes = []  
     permission_classes = []  
-    def post(self, request):
+    def post(self, request,*args, **kwargs):
         serializer = RegisterSerializer(data=request.data)
         if serializer.is_valid():
             user = serializer.save()
