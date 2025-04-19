@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
 from .serializers import RegisterSerializer
+from rest_framework.parsers import JSONParser
 from django.contrib.auth.models import User
 import logging
 
@@ -12,8 +13,10 @@ logger = logging.getLogger(__name__)
 class RegisterView(APIView):
     authentication_classes = []
     permission_classes = []
+    parser_classes = [JSONParser]
 
     def post(self, request):
+        
         logger.info(f"POST Request Data: {request.data}")  # Log the request data
         serializer = RegisterSerializer(data=request.data)
         if serializer.is_valid():
