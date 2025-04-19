@@ -5,6 +5,8 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn imf_api.wsgi:application --chdir imf_api
     envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: imf_api.settings
       - key: DEBUG
         value: False
       - key: SECRET_KEY
