@@ -25,13 +25,13 @@ Use the following header for authentication:
 ## 📚 Endpoints Overview
 
 ### 👤 Auth Routes
-- **POST api/v1/register/**  
+- **POST /api/v1/register/**  
   🔑 Register a new user.
   
 - **POST /api/v1/login/**  
   🚪 Get JWT access & refresh tokens.
   
-- **POST api/v1/logout/**  
+- **POST /api/v1/logout/**  
   🔒 Revoke refresh token.
 
 ---
