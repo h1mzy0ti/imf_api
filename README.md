@@ -7,11 +7,11 @@ Welcome to the **Impossible Missions Force (IMF) Gadget API**, built for elite o
 ---
 
 ## 🔧 Tech Stack
-- **Backend:** Django REST Framework 🖥️
-- **Auth:** JWT (SimpleJWT) 🔑
-- **DB:** PostgreSQL 💾
-- **ORM:** Django ORM 🔄
-- **Deployed On:** Railway 🚀
+- **Backend:** Django REST Framework 
+- **Auth:** JWT (SimpleJWT) 
+- **DB:** PostgreSQL 
+- **ORM:** Django ORM 
+- **Deployed On:** Railway 
 
 ---
 
@@ -59,13 +59,15 @@ Use the following header for authentication:
 
 ## 🌍 Base URL
 `https://imf-api-7ik3.onrender.com`  
-🌐 **Access the API** and start interacting with the gadgets right now!
+   **Access the API** and start interacting with the gadgets right now!
 
 ---
 
 ## 📑 Refer Postman Documentation
-For detailed API documentation and examples, you can view the Postman collection here:  
-[![View API in Postman](https://i.postimg.cc/L4kmQ1yF/postman-248x256.png)](https://documenter.getpostman.com/view/37555239/2sB2cd4xoq#e5719b4f-ac99-4473-9091-53e8b0f9fea0)
+For detailed API documentation and examples, you can view the Postman collection here -   
+<a href="https://documenter.getpostman.com/view/37555239/2sB2cd4xoq#e5719b4f-ac99-4473-9091-53e8b0f9fea0">
+    <img src="https://i.postimg.cc/L4kmQ1yF/postman-248x256.png" width="100" height="100">
+</a>
 
 ---
 
