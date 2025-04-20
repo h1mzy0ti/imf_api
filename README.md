@@ -25,40 +25,40 @@ Use the following header for authentication:
 ## 📚 Endpoints Overview
 
 ### 👤 Auth Routes
-- **POST /register/**  
+- **POST api/v1/register/**  
   🔑 Register a new user.
   
-- **POST /login/**  
+- **POST /api/v1/login/**  
   🚪 Get JWT access & refresh tokens.
   
-- **POST /logout/**  
+- **POST api/v1/logout/**  
   🔒 Revoke refresh token.
 
 ---
 
 ### 🎛️ Gadget Routes (Authenticated)
-- **GET /api/gadgets/**  
+- **GET /api/v1/gadgets/**  
      List user's gadgets with mission success probability.
 
-- **POST /api/gadgets/**  
+- **POST /api/v1/gadgets/**  
      Create a new gadget.
 
-- **PATCH /api/gadgets/{uuid}/**  
+- **PATCH /api/v1/gadgets/{uuid}/**  
      Update gadget details.
 
-- **DELETE /api/gadgets/{uuid}/**  
+- **DELETE /api/v1/gadgets/{uuid}/**  
      Mark gadget as "Decommissioned".
 
-- **POST /api/gadgets/{uuid}/self-destruct/**  
+- **POST /api/v1/gadgets/{uuid}/self-destruct/**  
      Simulate self-destruct sequence.
 
-- **GET /api/gadgets/{uuid}/status/?status=**  
+- **GET /api/v1/gadgets/{uuid}/status/?status=**  
      Filter gadgets by status.
 
 ---
 
 ## 🌍 Base URL
-`https://imf-api-7ik3.onrender.com`  
+`https://imf-api-7ik3.onrender.com/api/v1`  
    **Access the API** and start interacting with the gadgets right now!
 
 ---
