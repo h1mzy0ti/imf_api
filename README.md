@@ -66,7 +66,7 @@ Use the following header for authentication:
 ## 📑 Refer Postman Documentation
 For detailed API documentation and examples, you can view the Postman collection here -   
 <a href="https://documenter.getpostman.com/view/37555239/2sB2cd4xoq#e5719b4f-ac99-4473-9091-53e8b0f9fea0">
-    <img src="https://i.postimg.cc/L4kmQ1yF/postman-248x256.png" width="100" height="100">
+    <img src="https://i.postimg.cc/L4kmQ1yF/postman-248x256.png" width="20" height="20">
 </a>
 
 ---
