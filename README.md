@@ -65,7 +65,7 @@ Use the following header for authentication:
 
 ## 📑 Refer Postman Documentation
 For detailed API documentation and examples, you can view the Postman collection here:  
-[![View API in Postman](https://upload.wikimedia.orhttps://i.postimg.cc/L4kmQ1yF/postman-248x256.png)](https://documenter.getpostman.com/view/37555239/2sB2cd4xoq#e5719b4f-ac99-4473-9091-53e8b0f9fea0)
+[![View API in Postman](https://i.postimg.cc/L4kmQ1yF/postman-248x256.png)](https://documenter.getpostman.com/view/37555239/2sB2cd4xoq#e5719b4f-ac99-4473-9091-53e8b0f9fea0)
 
 ---
 
